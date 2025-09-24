@@ -1,0 +1,24 @@
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/16
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: quorumapp
+    tty: true
+    ports:
+      - "8080:8080"
+    environment:
+      "COMPOSE_BAKE": "true"
+      "RETRAIN": "false"
+    volumes:
+      - ".:/app"
+    networks:
+      default:
+        ipv4_address: 172.30.0.4
