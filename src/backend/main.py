@@ -1,6 +1,6 @@
 import uvicorn
 
-from api import ApiEndpoints
+#from api import ApiEndpoints
 
 def run():
 

@@ -7,10 +7,10 @@ RUN apt update && \
 #RUN apt install xsel
 
 # Set the working directory inside the container
-WORKDIR /app/src/frontend
+WORKDIR /app
 
 # Copy package.json and package-lock.json to install dependencies
-#COPY src/frontend/package*.json ./
+#COPY package*.json ./
 
 # Install dependencies
 #RUN npm install react-chartjs-2 chart.js axios
@@ -23,6 +23,7 @@ COPY . .
 
 # Install serve globally to serve the production build
 #RUN npm install -g serve
+WORKDIR /app/src/frontend
 RUN npm install
 
 # Expose the port the app will run on (e.g., 3000)

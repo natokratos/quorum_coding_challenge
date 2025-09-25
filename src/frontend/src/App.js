@@ -11,7 +11,7 @@ function App() {
         const formData = new FormData();
         formData.append("file", file);
 
-        const res = await axios.post("http://0.0.0.0:8000/api/upload-csv/", formData, {
+        const res = await axios.post("http://quorum-backend:8080/api/upload-csv/", formData, {
             headers: { "Content-Type": "multipart/form-data" },
         });
 
