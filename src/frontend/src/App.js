@@ -3,7 +3,6 @@ import axios from "axios";
 import { Bar } from "react-chartjs-2";
 
 function App() {
-    const [csvData, setCsvData] = useState([]);
     const [labels, setLabels] = useState([]);
     const [values, setValues] = useState([]);
 
@@ -12,12 +11,11 @@ function App() {
         const formData = new FormData();
         formData.append("file", file);
 
-        const res = await axios.post("http://localhost:8000/api/upload-csv/", formData, {
+        const res = await axios.post("http://0.0.0.0:8000/api/upload-csv/", formData, {
             headers: { "Content-Type": "multipart/form-data" },
         });
 
-        setCsvData(res.data.rows);
-        // For demo: assumes CSV has columns "label" and "value"
+        // Assumes CSV columns 'label' and 'value'
         setLabels(res.data.rows.map(row => row.label));
         setValues(res.data.rows.map(row => parseFloat(row.value)));
     };

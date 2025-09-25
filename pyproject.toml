@@ -1,9 +1,9 @@
 [project]
-name = "fiap-tech-challenge-04"
+name = "quorumapp"
 version = "1.0.0"
 description = ""
 authors = [
-    {name = "natokratos",email = "darktimeangel@gmail.com"}
+    {name = "nato117",email = "darktimeangel@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.12.10"
@@ -13,19 +13,22 @@ dependencies = [
     "endpoints (>=7.3.1,<8.0.0)",
     "setuptools (>=78.1.0,<79.0.0)",
     "standard-imghdr (>=3.13.0,<4.0.0)",
-    "pandas (>=2.2.3)",
-    "tensorflow (>=2.19.0)",
-    "tensorboard (>=2.19.0)",
-    "scikit-learn (>=1.6)",
-    "matplotlib (>=3.10.1)",
-    "schedule (>=1.2.0)",
-    "yfinance (>=0.2.61)"
+    "django (>=5.2.7)",
+    "djangorestframework (>=3.16.1)",
+    "django-cors-headers (>=4.9.0)"
+#    "django-admin (>=5.2.7)"
+#    "pandas (>=2.2.3)",
+#    "tensorflow (>=2.19.0)",
+#    "tensorboard (>=2.19.0)",
+#    "scikit-learn (>=1.6)",
+#    "matplotlib (>=3.10.1)",
+#    "schedule (>=1.2.0)",
+#    "yfinance (>=0.2.61)"
 ]
 
 [tool.poetry]
 packages = [
-    { include = "src/main.py" },
-    { include = "src/api.py" }
+    { include = "src/backend/main.py" }
 ]
 
 [build-system]

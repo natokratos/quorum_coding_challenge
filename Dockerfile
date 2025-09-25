@@ -18,7 +18,8 @@ RUN apt-get -y install wget sudo which vim
 
 RUN apt-get update && \
         apt-get -y upgrade
-RUN apt-get -y --fix-broken install gnome-browser-connector \
+RUN apt-get -y --fix-broken install \
+    #gnome-browser-connector \
 #        firefox-esr \
         software-properties-common \
 #        cron \
@@ -52,6 +53,7 @@ RUN poetry lock && \
 #        touch /var/log/cron.log && \
 #        crontab /etc/cron.d/cron-init && \
         chmod -Rf 777 /tmp/entrypoint.sh
+        #npm install react-chartjs-2 chart.js axios
 
 #CMD [ "/bin/bash" ]
 #CMD [ "nohup", "poetry", "run", "python3.13", "src/main.py", "&" ]
