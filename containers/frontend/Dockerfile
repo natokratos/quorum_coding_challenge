@@ -23,7 +23,7 @@ COPY . .
 
 # Install serve globally to serve the production build
 #RUN npm install -g serve
-WORKDIR /app/src/frontend
+WORKDIR /app/frontend
 RUN npm install
 
 # Expose the port the app will run on (e.g., 3000)

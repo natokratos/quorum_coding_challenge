@@ -8,11 +8,11 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12.10"
 dependencies = [
-    "uvicorn (>=0.34.0,<0.35.0)",
-    "fastapi (>=0.115.12,<0.116.0)",
-    "endpoints (>=7.3.1,<8.0.0)",
-    "setuptools (>=78.1.0,<79.0.0)",
-    "standard-imghdr (>=3.13.0,<4.0.0)",
+#    "uvicorn (>=0.34.0,<0.35.0)",
+#    "fastapi (>=0.115.12,<0.116.0)",
+#    "endpoints (>=7.3.1,<8.0.0)",
+#    "setuptools (>=78.1.0,<79.0.0)",
+#    "standard-imghdr (>=3.13.0,<4.0.0)",
     "django (>=5.2.7)",
     "djangorestframework (>=3.16.1)",
     "django-cors-headers (>=4.9.0)"
@@ -28,7 +28,7 @@ dependencies = [
 
 [tool.poetry]
 packages = [
-    { include = "src/backend/main.py" }
+    { include = "backend/manage.py" }
 ]
 
 [build-system]

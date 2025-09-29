@@ -2,6 +2,8 @@
 
 #cron &
 
-#poetry run python3.12 src/backend/main.py
+poetry run python3.12 backend/manage.py migrate
+
+poetry run python3.12 backend/manage.py runserver 0.0.0.0:8080
 #django-admin startproject backend .
-python manage.py startapp api
+#python src/backend/manage.py runserver
