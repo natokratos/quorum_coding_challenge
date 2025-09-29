@@ -24,7 +24,7 @@ COPY . .
 # Install serve globally to serve the production build
 #RUN npm install -g serve
 WORKDIR /app/frontend
-RUN npm install
+RUN npm install --save
 
 # Expose the port the app will run on (e.g., 3000)
 ENV HOST=0.0.0.0
@@ -34,3 +34,4 @@ EXPOSE 8000
 # Command to run the application using serve
 #CMD ["serve", "-s", "build", "-l", "8000"]
 CMD ["npm", "start"]
+#CMD ["bash"]

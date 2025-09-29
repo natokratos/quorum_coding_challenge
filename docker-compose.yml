@@ -35,7 +35,8 @@ services:
       "COMPOSE_BAKE": "true"
       "RETRAIN": "false"
     volumes:
-      - ".:/app"
+      - .:/app
+      - /app/frontend/node_modules
     networks:
       default:
         ipv4_address: 172.32.0.5

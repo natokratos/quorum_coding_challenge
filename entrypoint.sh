@@ -2,6 +2,8 @@
 
 #cron &
 
+poetry run python3.12 backend/manage.py makemigrations
+
 poetry run python3.12 backend/manage.py migrate
 
 poetry run python3.12 backend/manage.py runserver 0.0.0.0:8080

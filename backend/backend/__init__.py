@@ -3,7 +3,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'replace-this-with-a-random-key'
+SECRET_KEY = 'Test123'
 
 DEBUG = True
 
@@ -32,7 +32,7 @@ MIDDLEWARE = [
     'django.middleware.messages.MessageMiddleware',
 ]
 
-ROOT_URLCONF = 'backend.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATES = [
     {
