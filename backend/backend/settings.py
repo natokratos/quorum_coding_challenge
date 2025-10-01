@@ -8,6 +8,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'api',
+    'csvimport.app.CSVImportConf',
 ]
 
 MIDDLEWARE = [

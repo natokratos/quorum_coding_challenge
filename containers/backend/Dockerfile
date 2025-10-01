@@ -41,10 +41,10 @@ RUN python3 -m venv $POETRY_VENV \
 ENV PATH="${PATH}:${POETRY_VENV}/bin"
 
 #COPY cron-init /etc/cron.d/cron-init
-COPY entrypoint.sh /tmp/entrypoint.sh
-ADD . /app
+COPY ../../containers/backend/entrypoint.sh /tmp/entrypoint.sh
+ADD ../../ /app
 
-WORKDIR /app
+WORKDIR /app/backend
 
 # Install dependencies
 RUN poetry lock && \
